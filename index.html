@@ -20,7 +20,7 @@
         </ol>
       </details>
 
-      <details open>
+      <details>
         <summary>
           Conceptos esenciales del Desarrollo Web
         </summary>
@@ -153,6 +153,19 @@
   <p>Si tienes alguna pregunta escríbeme a <a href="mailto:me@leonidasesteban.com">me@leonidasesteban.com</a></p>
   <h3>Suscríbete a nuestro newsletter</h3>
 
+<script>
+  const $details = document.querySelectorAll("details")
+  console.log($details)
+  $details.forEach(($element)=>{
+    $element.querySelector("summary").addEventListener("click",expand)
+  })
 
+  function expand(){
+    $details.forEach(($element)=>{
+      $element.removeAttribute("open")
+    })
+  }
+
+</script>
 </body>
 </html>
